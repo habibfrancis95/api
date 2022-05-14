@@ -70,8 +70,8 @@ class Items:
     @staticmethod
     def getList(pageSize, pageNumber):
         try:
-            GeneralHelper.checkId(pageSize, ResponseCodes.itemIdInvalid)
-            GeneralHelper.checkId(pageNumber, ResponseCodes.itemIdInvalid)
+            GeneralHelper.checkId(pageSize, ResponseCodes.pageSizeInvalid)
+            GeneralHelper.checkId(pageNumber, ResponseCodes.pageNumberInvalid)
             resultList = []
             rows = ItemsDA.getList(pageNumber, pageSize)
             if not (rows is None):
